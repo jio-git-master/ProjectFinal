@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'fonts/icomoon/style.css')}}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/owl.carousel.min.css')}}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css')}}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css')}}">
+
+</head>
+<body>
+
+
+    <aside class="sidebar">
+      <div class="toggle">
+        <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+              <span></span>
+            </a>
+      </div>
+      <div class="side-inner">
+
+        <div class="profile">
+          <img src="{{ url_for('static', filename= 'images/profile.png')}}" alt="Image" class="img-fluid">
+          <h3 class="name">Jio Biala</h3>
+          <span class="country">Client</span>
+        </div>
+
+
+        <div class="nav-menu">
+          <ul>
+{#            <li class="accordion">#}
+{#              <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsible">#}
+{#                <span class="icon-home mr-3"></span>Feed#}
+{#              </a>#}
+{#              <div id="collapseOne" class="collapse" aria-labelledby="headingOne">#}
+{#                <div>#}
+{#                  <ul>#}
+{#                    <li><a href="#">News</a></li>#}
+{#                    <li><a href="#">Sport</a></li>#}
+{#                    <li><a href="#">Health</a></li>#}
+{#                  </ul>#}
+{#                </div>#}
+{#              </div>#}
+{#            </li>#}
+{#            <li class="accordion">#}
+{#              <a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsible">#}
+{#                <span class="icon-search2 mr-3"></span>Dashboard#}
+{#              </a>#}
+{##}
+{#              <div id="collapseTwo" class="collapse" aria-labelledby="headingOne">#}
+{#                <div>#}
+{#                  <ul>#}
+{#                    <li><a href="#">Loan List</a></li>#}
+{#                    <li><a href="#">Investment List</a></li>#}
+{#                    <li><a href="#">Inventory</a></li>#}
+{#                    <li><a href="#">Client Management</a></li>#}
+{#                  </ul>#}
+{#                </div>#}
+{#              </div>#}
+{##}
+{#            </li>#}
+                <li><a href="{{ url_for('dashboard') }}"><span class="icon-search2 mr-3"></span>Dashboard</a></li>
+                <li><a href="{{ url_for('loan_list') }}"><span class="icon-notifications mr-3"></span>Loan List</a></li>
+                <li><a href="#"><span class="icon-location-arrow mr-3"></span>Investment List</a></li>
+                <li><a href="#"><span class="icon-pie-chart mr-3"></span>Client Management</a></li>
+                <li><a href="#"><span class="icon-sign-out mr-3"></span>Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </aside>
+
+
+    <main>
+    <div class="site-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            {% block content %}
+
+
+            {% endblock %}
+          </div>
+        </div>
+    </div>
+    </main>
+
+
+
+
+    <script src="{{ url_for('static', filename= 'js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{ url_for('static', filename= 'js/popper.min.js')}}"></script>
+    <script src="{{ url_for('static', filename= 'js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename= 'js/main.js')}}"></script>
+
+</body>
+</html>
